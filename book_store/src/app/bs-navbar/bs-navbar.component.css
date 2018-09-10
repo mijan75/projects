@@ -1,0 +1,24 @@
+
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.search {
+    padding-right: 100px;
+
+}
+
+.dropdown-item:hover {
+    color: #c1d62e;
+}
+
+.dropdown-menu:hover {
+    color: #c1d62e;
+}
+
+.nav-item:hover {
+   background-color: #DDDDDD;
+   
+}
+

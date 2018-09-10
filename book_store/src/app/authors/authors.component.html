@@ -1,0 +1,21 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Birth Date</th>
+            <!-- <th></th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of authors$ | async">
+            <td><img [src]="a.imageUrl" class="thumbnail" alt=""></td>
+            <td>{{ a.name }}</td>
+            <td>{{ a.date }}</td>
+            <!-- <td>
+                <a [routerLink]="['/admin/authors/', a.$key]">View</a>
+            </td> -->
+        </tr>
+    </tbody>
+
+    </table>
