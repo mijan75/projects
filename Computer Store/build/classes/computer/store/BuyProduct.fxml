@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" maxHeight="170.0" maxWidth="361.0" prefHeight="170.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="computer.store.BuyProductController">
+   <children>
+      <Label layoutX="26.0" layoutY="32.0" text="If You Any Product Buy , Please Login Or Sign in" />
+      <Button layoutX="67.0" layoutY="76.0" mnemonicParsing="false" onAction="#handleLoginAction" prefHeight="26.0" prefWidth="73.0" style="-fx-background-image: #d58fd8;" text="Login" />
+      <Button layoutX="246.0" layoutY="74.0" mnemonicParsing="false" onAction="#handleSigninAction" text="Sign in" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="928.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movie_rent.MainViewController">
+  <tabs>
+    <Tab text="Movie List">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="movieListTable" layoutX="22.0" layoutY="94.0" onMouseClicked="#handleMouseClickedAction" prefHeight="444.0" prefWidth="875.0">
+                    <columns>
+                      <TableColumn fx:id="movieNameView" prefWidth="292.0" text="Movie Name" />
+                      <TableColumn fx:id="dirNameView" prefWidth="207.0" text="Director Name" />
+                        <TableColumn fx:id="starNameView" prefWidth="175.0" text="Star Name" />
+                        <TableColumn fx:id="relDateView" prefWidth="200.0" text="Release Date" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Add Movie">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="movieNameField" alignment="CENTER" labelFloat="true" layoutX="33.0" layoutY="27.0" prefHeight="38.0" prefWidth="301.0" promptText="Movie Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="dirNameField" alignment="CENTER" labelFloat="true" layoutX="33.0" layoutY="131.0" prefHeight="38.0" prefWidth="301.0" promptText="Director Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="starNameField" alignment="CENTER" labelFloat="true" layoutX="33.0" layoutY="238.0" prefHeight="38.0" prefWidth="303.0" promptText="Star Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton buttonType="RAISED" layoutX="49.0" layoutY="533.0" onAction="#handleMovieAddAction" prefHeight="37.0" prefWidth="111.0" text="Add">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <DatePicker fx:id="relDate" layoutX="87.0" layoutY="420.0" promptText="Release Date" />
+                  <JFXComboBox fx:id="buyPriceCombo" labelFloat="true" layoutX="35.0" layoutY="337.0" prefHeight="38.0" prefWidth="276.0" promptText="Buy Price" />
+                  <JFXTextField fx:id="priceAddedField" alignment="CENTER" labelFloat="true" layoutX="623.0" layoutY="382.0" prefHeight="38.0" prefWidth="216.0" promptText="Price Added">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton buttonType="RAISED" layoutX="712.0" layoutY="460.0" onAction="#handlePriceAddAction" text="Add">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Add Distributor">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="disNameField" alignment="CENTER" labelFloat="true" layoutX="34.0" layoutY="98.0" prefHeight="38.0" prefWidth="329.0" promptText="Distributor Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="disCityField" alignment="CENTER" labelFloat="true" layoutX="34.0" layoutY="184.0" prefHeight="38.0" prefWidth="329.0" promptText="Distributor Address">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="disNoField" alignment="CENTER" labelFloat="true" layoutX="34.0" layoutY="276.0" prefHeight="38.0" prefWidth="329.0" promptText="Distributor Contract  No.">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton buttonType="RAISED" layoutX="55.0" layoutY="451.0" onAction="#handleDistributorAddAction" prefHeight="37.0" prefWidth="111.0" text="Add">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <DatePicker fx:id="distributorDate" layoutX="93.0" layoutY="367.0" prefHeight="25.0" prefWidth="185.0" promptText="Hired Date" />
+                  <TableView fx:id="distributorTableView" layoutX="397.0" layoutY="76.0" onMouseClicked="#handleMouseClickedAction" prefHeight="375.0" prefWidth="516.0">
+                    <columns>
+                      <TableColumn fx:id="disNameView" prefWidth="161.0" text="Distributor Name" />
+                      <TableColumn fx:id="disCityView" prefWidth="100.0" text="City" />
+                        <TableColumn fx:id="disnumberView" prefWidth="129.0" text="Contract Number" />
+                        <TableColumn fx:id="disDateView" prefWidth="125.0" text="Hired Date" />
+                    </columns>
+                  </TableView>
+                  <JFXButton buttonType="RAISED" layoutX="600.0" layoutY="469.0" onAction="#handleDistributorDelAction" prefHeight="37.0" prefWidth="111.0" text="Delete">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="238.0" layoutY="451.0" onAction="#handleDistributorUpdateAction" prefHeight="37.0" prefWidth="111.0" text="Update">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Add Store">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="storeNameField" alignment="CENTER" labelFloat="true" layoutX="33.0" layoutY="93.0" prefHeight="38.0" prefWidth="329.0" promptText="Store Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="storeCityField" alignment="CENTER" labelFloat="true" layoutX="33.0" layoutY="194.0" prefHeight="38.0" prefWidth="329.0" promptText="Store Address">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="storeNoField" alignment="CENTER" labelFloat="true" layoutX="33.0" layoutY="292.0" prefHeight="38.0" prefWidth="329.0" promptText="Store Phone No.">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <DatePicker fx:id="storeDate" layoutX="97.0" layoutY="460.0" promptText="Established Date" />
+                  <JFXButton buttonType="RAISED" layoutX="42.0" layoutY="523.0" onAction="#handleStoreMovieAddAction" prefHeight="37.0" prefWidth="111.0" text="Add">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <TableView fx:id="storeTableView" layoutX="388.0" layoutY="66.0" onMouseClicked="#handleStoreClickedAction" prefHeight="382.0" prefWidth="532.0">
+                    <columns>
+                      <TableColumn fx:id="storeNameView" prefWidth="184.0" text="Stored Name" />
+                      <TableColumn fx:id="storeCityView" prefWidth="112.0" text="Stored City" />
+                        <TableColumn fx:id="StorenumberView" prefWidth="119.0" text="Contract Number" />
+                        <TableColumn fx:id="estaDate" prefWidth="116.0" text="Established Date" />
+                    </columns>
+                  </TableView>
+                  <JFXTextField fx:id="storeuserNameField" alignment="CENTER" labelFloat="true" layoutX="39.0" layoutY="392.0" prefHeight="38.0" prefWidth="329.0" promptText="Store User Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton buttonType="RAISED" layoutX="608.0" layoutY="533.0" onAction="#handleStoreMovieDelAction" prefHeight="37.0" prefWidth="111.0" text="Delete">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="216.0" layoutY="523.0" onAction="#handleStoreUpdateAction" prefHeight="37.0" prefWidth="111.0" text="Update">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Add Employee">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="clearkNameField" alignment="CENTER" labelFloat="true" layoutX="23.0" layoutY="80.0" prefHeight="33.0" prefWidth="244.0" promptText="Employee  Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="clearkCityField" alignment="CENTER" labelFloat="true" layoutX="23.0" layoutY="178.0" prefHeight="33.0" prefWidth="244.0" promptText="Employee  Address">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="clearkNoField" alignment="CENTER" labelFloat="true" layoutX="23.0" layoutY="282.0" prefHeight="33.0" prefWidth="244.0" promptText="Employee  Number">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <DatePicker fx:id="clearkEntryDate" layoutX="50.0" layoutY="441.0" promptText="entryDate" />
+                  <JFXButton buttonType="RAISED" layoutX="50.0" layoutY="507.0" onAction="#handleClearkAddAction" prefHeight="30.0" prefWidth="62.0" text="Add">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <TableView fx:id="clearkTable" layoutX="287.0" layoutY="80.0" onMouseClicked="#handleEmployeeClickedAction" prefHeight="298.0" prefWidth="635.0">
+                    <columns>
+                      <TableColumn fx:id="clearkNameView" prefWidth="129.0" text="Employee Name" />
+                      <TableColumn fx:id="employeeStoreName" prefWidth="219.0" text="Employee  Store Name" />
+                        <TableColumn fx:id="clearkNoView" prefWidth="105.0" text="Contract Number" />
+                        <TableColumn fx:id="clearkCityView" prefWidth="101.0" text="Employee City" />
+                        <TableColumn fx:id="clearkDateView" text="Entry Date" />
+                    </columns>
+                  </TableView>
+                  <JFXComboBox fx:id="storeNameCombo" labelFloat="true" layoutX="25.0" layoutY="359.0" prefHeight="25.0" prefWidth="241.0" promptText="Store List" />
+                  <JFXButton buttonType="RAISED" layoutX="605.0" layoutY="507.0" onAction="#handleClearkDelAction" prefHeight="30.0" prefWidth="71.0" text="Delete">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="176.0" layoutY="507.0" onAction="#handleClearkUpdateAction" prefHeight="30.0" prefWidth="73.0" text="Update">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Movie Distribute">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXComboBox fx:id="distributeMovieList" labelFloat="true" layoutX="14.0" layoutY="65.0" prefHeight="39.0" prefWidth="261.0" promptText="Movie List View" />
+                  <JFXComboBox fx:id="distributeStoreList" labelFloat="true" layoutX="14.0" layoutY="197.0" prefHeight="39.0" prefWidth="258.0" promptText="Store  List View" />
+                  <JFXComboBox fx:id="distributeDistList" labelFloat="true" layoutX="14.0" layoutY="326.0" prefHeight="39.0" prefWidth="259.0" promptText="Distributor  List View" />
+                  <DatePicker fx:id="distributeDate" layoutX="49.0" layoutY="438.0" prefHeight="30.0" prefWidth="208.0" promptText="Distribute Date" />
+                  <JFXButton buttonType="RAISED" layoutX="110.0" layoutY="502.0" onAction="#handleSendAction" prefHeight="35.0" prefWidth="72.0" text="Send">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <TableView fx:id="offeredMovieTableView" layoutX="306.0" layoutY="85.0" prefHeight="345.0" prefWidth="592.0">
+                    <columns>
+                      <TableColumn fx:id="offeredMovieView" prefWidth="155.0" text="Movie Name" />
+                      <TableColumn fx:id="offeredStoreView" prefWidth="209.0" text="Store Name" />
+                        <TableColumn fx:id="offeredDistributorView" prefWidth="144.0" text="Distributor Name" />
+                        <TableColumn fx:id="offeredDateView" prefWidth="83.0" text="Date" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Customer List">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="cusomerListTable" layoutX="97.0" layoutY="101.0" prefHeight="335.0" prefWidth="771.0">
+                    <columns>
+                      <TableColumn fx:id="customerView" prefWidth="138.0" text="Customer Name" />
+                      <TableColumn fx:id="CstoreNameView" prefWidth="163.0" text="Store Name" />
+                        <TableColumn fx:id="clearkView" prefWidth="115.0" text="Cleark Name" />
+                        <TableColumn fx:id="priceView" prefWidth="98.0" text="Price" />
+                        <TableColumn fx:id="dateView" prefWidth="85.0" text="Date" />
+                        <TableColumn fx:id="movieViewSale" prefWidth="180.0" text="Movie Name" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Log Out">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="334.0" layoutY="27.0" onAction="#handleLogoutAction" prefHeight="30.0" prefWidth="77.0" text="Log Out">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

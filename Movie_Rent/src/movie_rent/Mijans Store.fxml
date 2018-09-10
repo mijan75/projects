@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movie_rent.MijansStoreController">
+   <tabs>
+      <Tab text="Profile">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="storeNameLabel" layoutX="289.0" layoutY="36.0" prefHeight="34.0" prefWidth="274.0">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font></Label>
+                  <Label fx:id="storeCityLabel" layoutX="289.0" layoutY="121.0" prefHeight="34.0" prefWidth="274.0">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font></Label>
+                  <Label fx:id="storeDateLabel" layoutX="289.0" layoutY="293.0" prefHeight="34.0" prefWidth="274.0">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font></Label>
+                  <Label layoutX="37.0" layoutY="36.0" prefHeight="34.0" prefWidth="135.0" text="Store Name :" />
+                  <Label layoutX="37.0" layoutY="121.0" prefHeight="34.0" prefWidth="135.0" text="Store City :" />
+                  <Label layoutX="37.0" layoutY="210.0" prefHeight="34.0" prefWidth="135.0" text="Contract Number :" />
+                  <Label layoutX="37.0" layoutY="293.0" prefHeight="34.0" prefWidth="135.0" text="Established Date :" />
+                  <JFXTextField fx:id="contractNoField" layoutX="289.0" layoutY="209.0" prefHeight="34.0" prefWidth="217.0">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font></JFXTextField>
+                  <JFXButton buttonType="RAISED" layoutX="383.0" layoutY="371.0" onAction="#handleUpdateAction" prefHeight="34.0" prefWidth="78.0" text="Update">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Movie List">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="994.0">
+               <children>
+                  <TableView fx:id="movieListTable" layoutX="22.0" layoutY="40.0" prefHeight="313.0" prefWidth="567.0">
+                    <columns>
+                      <TableColumn fx:id="movieNameView" prefWidth="276.0" text="Movie Name" />
+                      <TableColumn fx:id="disNameView" prefWidth="162.0" text="Distributor Name" />
+                        <TableColumn fx:id="buyDateView" prefWidth="127.0" text="Buy Date" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Customer Information">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="customerNameField" alignment="CENTER" labelFloat="true" layoutX="60.0" layoutY="53.0" prefHeight="34.0" prefWidth="234.0" promptText="Customer Name" />
+                  <JFXTextField fx:id="customerAddressField" alignment="CENTER" labelFloat="true" layoutX="60.0" layoutY="133.0" prefHeight="34.0" prefWidth="234.0" promptText="Customer Address" />
+                  <JFXTextField fx:id="customerNumberField" alignment="CENTER" labelFloat="true" layoutX="60.0" layoutY="218.0" prefHeight="34.0" prefWidth="234.0" promptText="Customer Contract Number" />
+                  <JFXComboBox fx:id="movieListCombo" labelFloat="true" layoutX="376.0" layoutY="51.0" prefHeight="32.0" prefWidth="254.0" promptText="Movie List" />
+                  <JFXComboBox fx:id="clearkListCombo" labelFloat="true" layoutX="376.0" layoutY="134.0" prefHeight="32.0" prefWidth="254.0" promptText="Cleark List" />
+                  <JFXComboBox fx:id="priceListCombo" labelFloat="true" layoutX="376.0" layoutY="263.0" prefHeight="32.0" prefWidth="254.0" promptText="Price List" />
+                  <DatePicker fx:id="saleDate" layoutX="405.0" layoutY="327.0" prefHeight="26.0" prefWidth="174.0" promptText="Sale Date" />
+                  <JFXButton buttonType="RAISED" layoutX="126.0" layoutY="295.0" onAction="#handleSubmitAction" prefHeight="31.0" prefWidth="68.0" text="Submit">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXComboBox fx:id="customerListCombo" labelFloat="true" layoutX="376.0" layoutY="202.0" prefHeight="32.0" prefWidth="254.0" promptText="Customer List" />
+                  <JFXButton buttonType="RAISED" layoutX="458.0" layoutY="382.0" onAction="#handleSaveAction" prefHeight="31.0" prefWidth="68.0" text="Save">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Customer List">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="customerTable" layoutX="109.0" layoutY="83.0" prefHeight="269.0" prefWidth="569.0">
+                    <columns>
+                      <TableColumn fx:id="customerNameView" prefWidth="146.0" text="Customer Name" />
+                      <TableColumn fx:id="customeraddressView" prefWidth="250.0" text="Address" />
+                        <TableColumn fx:id="customerNumberView" prefWidth="172.0" text="Contract Number" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Cleark List">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="clearkTable" layoutX="128.0" layoutY="39.0" prefHeight="281.0" prefWidth="486.0">
+                    <columns>
+                      <TableColumn fx:id="clearkNameView" prefWidth="130.0" text="Cleark Name" />
+                      <TableColumn fx:id="cCityView" prefWidth="104.0" text="City" />
+                        <TableColumn fx:id="cNumberView" prefWidth="124.0" text="Number" />
+                        <TableColumn fx:id="dateView" prefWidth="127.0" text="Date" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Movie Sale ">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="saleTableView" layoutX="97.0" layoutY="49.0" prefHeight="279.0" prefWidth="593.0">
+                    <columns>
+                      <TableColumn fx:id="customerView" prefWidth="139.0" text="Customer Name" />
+                      <TableColumn fx:id="movieView" prefWidth="173.0" text="Movie Name" />
+                        <TableColumn fx:id="clearkView" prefWidth="108.0" text="Cleark Name" />
+                        <TableColumn fx:id="priceListView" prefWidth="79.0" text="Price" />
+                        <TableColumn fx:id="saleDateView" prefWidth="94.0" text="Date" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Log Out">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="376.0" layoutY="39.0" onAction="#handleLogoutAction" text="Log Out">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</JFXTabPane>

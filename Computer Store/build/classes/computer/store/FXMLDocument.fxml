@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="550.0" maxWidth="1000.0" onKeyReleased="#handleKeySearchAction" prefHeight="548.0" prefWidth="1000.0" style="-fx-background-color: #aeb6bf;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="computer.store.FXMLDocumentController">
+   <children>
+      <TextField fx:id="searchField" layoutX="815.0" layoutY="69.0" onKeyReleased="#handleKeyReleasedAction" prefHeight="26.0" prefWidth="148.0" promptText="Search any Product" />
+      <ComboBox fx:id="componentCombo" layoutX="20.0" layoutY="246.0" onAction="#handleComponentComboAction" prefHeight="26.0" prefWidth="167.0" promptText="Product Catagory" />
+      <TableView fx:id="detailsProductView" layoutX="419.0" layoutY="246.0" prefHeight="200.0" prefWidth="538.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="modelColumn" prefWidth="265.0" text="Model" />
+            <TableColumn fx:id="priceColumn" prefWidth="79.0" text="Price" />
+            <TableColumn fx:id="statusColumn" prefWidth="113.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="527.0" layoutY="497.0" mnemonicParsing="false" onAction="#handleCompareAction" text="Compare" />
+      <Button layoutX="623.0" layoutY="497.0" mnemonicParsing="false" onAction="#handleBuyAction" prefHeight="26.0" prefWidth="65.0" text="Buy" />
+      <Button layoutX="847.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleManagerLoginAction" prefHeight="26.0" prefWidth="115.0" style="-fx-background-color: #a569bd;" text="Manager Login" textFill="#fdfaff" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="332.0" layoutY="26.0" prefHeight="41.0" prefWidth="291.0" text="Dolphin Computers Store">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listCatagoryView" layoutX="208.0" layoutY="246.0" onMouseClicked="#handleListViewAction" prefHeight="200.0" prefWidth="200.0" />
+      <Label alignment="CENTER" layoutX="208.0" layoutY="213.0" prefHeight="26.0" prefWidth="128.0" text="Product Catagory" />
+      <Button layoutX="706.0" layoutY="498.0" mnemonicParsing="false" onAction="#handleShowDataAction" text="Show All Product" />
+      <Button layoutX="847.0" layoutY="497.0" mnemonicParsing="false" onAction="#handleClearAction" text="Clear" />
+      <Button layoutX="909.0" layoutY="497.0" mnemonicParsing="false" onAction="#handleCloseAction" text="Close" />
+      <ImageView fitHeight="79.0" fitWidth="128.0" layoutX="178.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         
+      </ImageView>  
+             
+          
+       
+   </children>
+</AnchorPane>

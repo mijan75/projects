@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="265.0" maxWidth="356.0" prefHeight="265.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="computer.store.ManagerloginController">
+   <children>
+      <Label layoutX="20.0" layoutY="107.0" text="User Name :" />
+      <Label layoutX="22.0" layoutY="159.0" text="Password :" />
+      <TextField fx:id="userNameField" layoutX="128.0" layoutY="102.0" promptText="Type Your User Name" />
+      <PasswordField fx:id="passwordField" layoutX="125.0" layoutY="156.0" promptText="Type Your Password" />
+      <Button layoutX="173.0" layoutY="214.0" mnemonicParsing="false" onAction="#handleLoginAction" prefHeight="26.0" prefWidth="71.0" text="Login" />
+      <Button layoutX="265.0" layoutY="214.0" mnemonicParsing="false" onAction="#handleResetAction" prefHeight="26.0" prefWidth="62.0" text="Reset" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="123.0" layoutY="25.0" prefHeight="26.0" prefWidth="123.0" text="Manager Login">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="97.0" layoutY="214.0" mnemonicParsing="false" onAction="#handleBackACtion" prefHeight="26.0" prefWidth="62.0" text="Back" />
+   </children>
+</AnchorPane>

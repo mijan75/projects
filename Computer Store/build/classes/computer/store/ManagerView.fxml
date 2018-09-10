@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="726.0" maxWidth="875.0" prefHeight="726.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="computer.store.ManagerViewController">
+   <children>
+      <Button layoutX="416.0" layoutY="675.0" mnemonicParsing="false" onAction="#handleCustomerListAction" text="Customer List" />
+      <TableView fx:id="managerTableView" layoutX="12.0" layoutY="75.0" onMouseClicked="#handleTableViewClickedAction" prefHeight="322.0" prefWidth="775.0">
+        <columns>
+          <TableColumn fx:id="managerIdColumn" prefWidth="100.0" text="Product Id" />
+          <TableColumn fx:id="managerModelColumn" prefWidth="252.0" text="Model" />
+            <TableColumn fx:id="managerPriceColumn" prefWidth="82.0" text="Price " />
+            <TableColumn fx:id="managerCatagoryColumn" prefWidth="133.0" text="Catagory" />
+            <TableColumn fx:id="managerSattusColumn" prefWidth="96.0" text="Status" />
+            <TableColumn fx:id="brandColoumn" prefWidth="111.0" text="Brand Name" />
+        </columns>
+      </TableView>
+      <Label layoutX="22.0" layoutY="427.0" text="Product Id :" />
+      <Label layoutX="24.0" layoutY="463.0" text="Model :" />
+      <Label layoutX="22.0" layoutY="508.0" text="Price :" />
+      <Label layoutX="26.0" layoutY="553.0" text="Catagory :" />
+      <Label layoutX="24.0" layoutY="593.0" text="Status :" />
+      <TextField fx:id="statusField" layoutX="131.0" layoutY="589.0" promptText="Type an status" />
+      <ComboBox fx:id="catagoryCombo" layoutX="130.0" layoutY="549.0" onAction="#handleCatagoryAction" prefHeight="26.0" prefWidth="171.0" promptText="Catagory" />
+      <Button layoutX="132.0" layoutY="676.0" mnemonicParsing="false" onAction="#handleAddAction" text="Add Product" />
+      <Button layoutX="350.0" layoutY="676.0" mnemonicParsing="false" onAction="#handleResetACtion" text="Reset" />
+      <Button layoutX="248.0" layoutY="676.0" mnemonicParsing="false" onAction="#handleDeleteAction" prefHeight="26.0" prefWidth="83.0" text="Delete " />
+      <TextField fx:id="idField" layoutX="128.0" layoutY="423.0" promptText="Type an id" />
+      <TextField fx:id="modelField" layoutX="130.0" layoutY="460.0" prefHeight="26.0" prefWidth="335.0" promptText="Type an model" />
+      <TextField fx:id="priceField" layoutX="129.0" layoutY="504.0" promptText="Type an  price" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="341.0" layoutY="11.0" prefHeight="26.0" prefWidth="189.0" text="Manager Interface">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="547.0" layoutY="675.0" mnemonicParsing="false" onAction="#handleLogOutAction" prefHeight="26.0" prefWidth="75.0" text="Log Out" />
+      <Label layoutX="25.0" layoutY="632.0" text="Brand :" />
+      <TextField fx:id="brandField" layoutX="131.0" layoutY="627.0" promptText="Type an Brand" />
+      <Label fx:id="successfullyLabel" layoutX="341.0" layoutY="632.0" prefHeight="16.0" prefWidth="323.0" />
+      <Button layoutX="641.0" layoutY="675.0" mnemonicParsing="false" onAction="#handleCloseAction" text="Close" />
+   </children>
+</AnchorPane>
